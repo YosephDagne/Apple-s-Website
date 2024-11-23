@@ -306,3 +306,67 @@ body {
   font-weight: 700;
   font-size: 45px;
 }
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+  /* Header adjustments */
+  .header-wrapper ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    display: none; /* Initially hidden */
+    background: black;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .header-wrapper ul.active {
+    display: flex; /* Show when active */
+  }
+
+  .header-wrapper .menu-icon {
+    display: block;
+    cursor: pointer;
+    padding: 15px;
+    color: #fff;
+  }
+
+  .header-wrapper .header-links-wrapper ul li {
+    padding: 10px 20px;
+    text-align: right;
+  }
+
+  .header-wrapper .logo-link,
+  .header-wrapper .search-link,
+  .header-wrapper .cart-link {
+    display: none; /* Hide additional links */
+  }
+
+  /* Adjust sections for smaller screens */
+  .second-hightlight-wrapper,
+  .third-highlight-wrapper,
+  .left-side-wrapper,
+  .right-side-wrapper {
+    height: auto;
+    padding: 30px 10px;
+    background-size: cover;
+  }
+
+  .fourth-highlight-wrapper,
+  .fifth-highlight-wrapper,
+  .sixth-highlight-wrapper {
+    flex-direction: column;
+  }
+
+  .left-side-wrapper,
+  .right-side-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .description-wrapper {
+    padding: 10px;
+  }
+}
